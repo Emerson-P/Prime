@@ -13,3 +13,7 @@ Route::get('/login', [User::class , 'login'])->name('login');
 // Route::prefix('/app')->group(function(){
 //      Route::get('/carteira', [App::class , 'carteira']);
 // });
+
+Route::fallback(function(){
+    return view('fallBack');
+});
