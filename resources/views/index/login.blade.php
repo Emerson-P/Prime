@@ -63,7 +63,7 @@
 
 <div class="form-container">
     <h1>Login</h1>
-    <form action="/cadastrar" method="POST">
+    <form action="/addPost" method="POST">
         <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
@@ -73,11 +73,11 @@
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
         </div>
         <div class="form-group">
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Login</button>
         </div>
     </form>
 </div>
 
-<a href="/">voltar</a>
+<a href="{{Route('index')}}">voltar</a>
 </body>
 </html>

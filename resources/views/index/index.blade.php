@@ -1,2 +1,2 @@
-<a href="/login">Faça login</a>
-<a href="/cadastro">Cadastre</a>
+<a href="{{ route('login')}}">Faça login</a>
+<a href="{{ route('cadastro')}}">Cadastre</a>

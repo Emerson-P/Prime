@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class User extends Controller
 {
+    // Folder "index" contendo arquivos views como cadastro e login 
     public function index(){
         return view('index.index');
     }

@@ -63,7 +63,7 @@
 
 <div class="form-container">
     <h1>Cadastro</h1>
-    <form action="/cadastrar" method="POST">
+    <form action="/addPost" method="POST">
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -82,6 +82,6 @@
     </form>
 </div>
 
-<a href="/">voltar</a>
+<a href="{{Route('index')}}">voltar</a>
 </body>
 </html>
