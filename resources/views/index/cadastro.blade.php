@@ -63,10 +63,12 @@
 
 <div class="form-container">
     <h1>Cadastro</h1>
-    <form action="/addPost" method="POST">
+    <form action="/cadastro" method="POST">
+        <!-- Token obrigatorio do laravel para o metodo post -->
+        @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <input type="text" id="nome" name="name" placeholder="Digite seu nome" required>
         </div>
         <div class="form-group">
             <label for="email">E-mail</label>
@@ -74,7 +76,7 @@
         </div>
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" name="password" placeholder="Digite sua senha" required>
         </div>
         <div class="form-group">
             <button type="submit">Cadastrar</button>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User as UserModel;
 
 class User extends Controller
 {
@@ -10,10 +11,23 @@ class User extends Controller
     public function index(){
         return view('index.index');
     }
-    public function cadastro(){
+    public function cadastroPagina(){
         return view('index.cadastro');
     }
     public function login(){
         return view('index.login');
+    }
+    
+    public function cadastroPost(Request $request){
+
+        $modelUser = new UserModel();
+        $modelUser->name = $request->input('name');
+        $modelUser->email = $request->input('email');
+        $modelUser->password = $request->input('password');
+
+        $modelUser->save();
+
+        return view('index.cadastro');
+        // return view('index.login');
     }
 }

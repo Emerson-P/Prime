@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->double('WalletValue');
-            $table->double('patrimony');
+            $table->double('WalletValue')->default(0);
+            $table->double('patrimony')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

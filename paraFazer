@@ -1,0 +1,8 @@
+Teste unitarios 
+jwt
+Mudar pagina inicial para pagina do site com algumas funções que não precisam de login como : Calcular cdi ou ver velores de ativos
+
+php artisan serve para colocor o servidor no ar 
+php artisan migrate para criar as migrates
+
+remover HardCode 
