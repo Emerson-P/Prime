@@ -2,7 +2,11 @@ Teste unitarios
 jwt
 Mudar pagina inicial para pagina do site com algumas funções que não precisam de login como : Calcular cdi ou ver velores de ativos
 
+Add erros nos campos de texto
+Add senha forte
+
+Autenticar email ? -> add função de aviso por email caso alguma ação esteja em um preço desejado para compra
+
+
 php artisan serve para colocor o servidor no ar 
 php artisan migrate para criar as migrates
-
-remover HardCode 

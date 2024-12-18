@@ -20,6 +20,12 @@ class User extends Controller
     
     public function cadastroPost(Request $request){
 
+        $request->validate([
+            'nome' => 'required|min:3|max:40',
+            'email' => 'required',
+            'senha' => 'required|min:3|max:12' 
+        ]);
+
         $modelUser = new UserModel();
         $modelUser->name = $request->input('name');
         $modelUser->email = $request->input('email');
@@ -27,7 +33,7 @@ class User extends Controller
 
         $modelUser->save();
 
-        return view('index.cadastro');
-        // return view('index.login');
+    
+        return view('index.login');
     }
 }
