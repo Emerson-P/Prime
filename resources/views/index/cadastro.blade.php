@@ -75,20 +75,20 @@
 
 <div class="form-container">
     <h1>Cadastro</h1>
-    <form action="/cadastro" method="POST">
+    <form action="{{ route('cadastro_post')}}" method="POST">
         <!-- Token obrigatorio do laravel para o metodo post -->
         @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="name" placeholder="Digite seu nome" required>
+            <input type="text" id="nome" value="{{old('name')}}" name="name" placeholder="Digite seu nome" required>
         </div>
         <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Digite seu e-mail" required>
         </div>
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="password" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" name="password" value="{{old('password')}}" placeholder="Digite sua senha" required>
         </div>
         <div class="form-group">
             <button type="submit">Cadastrar</button>

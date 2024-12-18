@@ -21,9 +21,9 @@ class User extends Controller
     public function cadastroPost(Request $request){
 
         $request->validate([
-            'nome' => 'required|min:3|max:40',
+            'name' => 'required|min:3|max:40',
             'email' => 'required',
-            'senha' => 'required|min:3|max:12' 
+            'password' => 'required|min:3|max:12' 
         ]);
 
         $modelUser = new UserModel();
@@ -35,5 +35,13 @@ class User extends Controller
 
     
         return view('index.login');
+    }
+
+    public function loginPost(Request $request){
+
+        $request->validate([
+            'email' => 'email',
+            'senha' => 'required|min:3|max:12' 
+        ]);
     }
 }

@@ -63,14 +63,14 @@
 
 <div class="form-container">
     <h1>Login</h1>
-    <form action="/addPost" method="POST">
+    <form action="{{ route('login_post')}}" method="POST">
         <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            <input type="email" id="email" value="{{old('email')}}" name="email" placeholder="Digite seu e-mail" required>
         </div>
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" value="{{old('senha')}}" name="senha" placeholder="Digite sua senha" required>
         </div>
         <div class="form-group">
             <button type="submit">Login</button>

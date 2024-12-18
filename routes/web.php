@@ -9,6 +9,7 @@ Route::get('/cadastro', [User::class , 'cadastroPagina'])->name('cadastro_pagina
 Route::get('/login', [User::class , 'login'])->name('login_pagina');
 
 Route::post('/cadastro', [User::class , 'cadastroPost'])->name('cadastro_post');
+Route::post('/login', [User::class , 'loginPost'])->name('login_post');
 
 
     // ***** Usar expressão regular where ?
