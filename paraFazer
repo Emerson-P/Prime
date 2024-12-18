@@ -3,7 +3,8 @@ jwt
 Mudar pagina inicial para pagina do site com algumas funções que não precisam de login como : Calcular cdi ou ver velores de ativos
 
 Add erros nos campos de texto
-Add senha forte
+Add senha forte e retirar minimo 3
+Add regras de feedback mais espeficas a erros -> cadastropost e loginPost
 
 Autenticar email ? -> add função de aviso por email caso alguma ação esteja em um preço desejado para compra
 
