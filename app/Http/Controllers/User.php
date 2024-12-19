@@ -44,6 +44,7 @@ class User extends Controller
         return view('index.login');
     }
 
+    
     public function loginPost(Request $request){
 
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\App;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
@@ -10,7 +11,10 @@ Route::get('/cadastro', [User::class , 'cadastroPagina'])->name('cadastro_pagina
 Route::get('/login', [User::class , 'login'])->name('login_pagina');
 
 Route::post('/cadastro', [User::class , 'cadastroPost'])->name('cadastro_post');
-Route::post('/login', [User::class , 'loginPost'])->name('login_post');
+
+
+
+Route::post('/login', [AuthController::class , 'AuthLogin'])->name('login_post');
 
 
 Route::prefix('/app')->group(function(){
