@@ -7,7 +7,8 @@ Add senha forte e retirar minimo 3
 Add regras de feedback mais espeficas a erros -> cadastropost e loginPost
 
 Autenticar email ? -> add função de aviso por email caso alguma ação esteja em um preço desejado para compra
-
+Utilize rotinas
+Se sua aplicação permitir, utilize rotinas ou threads para obter os dados. Isso pode melhorar o tempo final de resposta do seu serviço que utiliza a API.
 
 php artisan serve para colocor o servidor no ar 
 php artisan migrate para criar as migrates

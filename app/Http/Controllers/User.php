@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\HgBrasilService;
 use Illuminate\Http\Request;
 use App\Models\User as UserModel;
 use Illuminate\Support\Facades\Hash;
@@ -66,8 +67,16 @@ class User extends Controller
             echo "Erro";
         }
 
+        $hgApi = new HgBrasilService();
+        try {
+            $financeData = $hgApi->getFinanceData();
+            
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+        print_r($financeData);
+
         
-        print($usuario);
         
     }
 }
