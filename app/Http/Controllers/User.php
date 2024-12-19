@@ -67,16 +67,6 @@ class User extends Controller
             echo "Erro";
         }
 
-        $hgApi = new HgBrasilService();
-        try {
-            $financeData = $hgApi->getFinanceData();
-            
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-        print_r($financeData);
-
-        
-        
+        return redirect()->route('HomePage');
     }
 }
