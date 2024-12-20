@@ -74,7 +74,7 @@
 
 <div class="form-container">
     <h1>Login</h1>
-    <form action="{{ route('login_post')}}" method="POST">
+    <form action="{{ Route ('login_post')}}" method="POST">
         @csrf
         <div class="form-group">
             <label for="email">E-mail</label>
